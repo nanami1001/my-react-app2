@@ -1,0 +1,103 @@
+:root {
+  font-family: "Gothic", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: #f2f2f2;
+  background-color: #000; /* 預設背景，實際由背景圖覆蓋 */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 背景與淡入動畫 */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../ph/beach.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* 半透明遮罩 */
+  z-index: -1;
+}
+
+/* 標題樣式 */
+h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  margin: 1em 0;
+  color: #6d9fb8;
+}
+
+/* 連結樣式 */
+a {
+  font-weight: 600;
+  color: #9bb0d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #ffffff;
+}
+
+/* 按鈕樣式 */
+button {
+  border-radius: 12px;
+  border: none;
+  padding: clamp(0.5em, 1.2vw, 1em) clamp(1em, 3vw, 2em);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  background-color: rgba(186, 227, 255, 0.8);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: rgba(105, 140, 175, 0.9);
+  transform: scale(1.05);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid #00ccff;
+}
+
+/* 淡入動畫定義 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 亮色主題適配（可選） */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #7090af;
+    background-color: #f5faff;
+  }
+  a:hover {
+    color: #e1efff;
+  }
+  button {
+    background-color: #abcbe0;
+  }
+}

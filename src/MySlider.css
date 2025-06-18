@@ -1,0 +1,31 @@
+.slider-box {
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 2rem;
+    background-color: rgba(255, 238, 238, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000; /* 模擬黑色邊框 */
+  }
+  
+  
+  
+  .slider-box label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .slider-box input[type="range"] {
+    width: 100%;
+  }
+  
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0 20px;
+  }

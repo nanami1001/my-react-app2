@@ -1,0 +1,60 @@
+.calculator {
+    width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  
+    /* 加寬邊框 */
+    border: 4px solid #333; /* 4px 粗實線，顏色可改 */
+  }
+  
+  
+  .display {
+    background-color: #222;
+    color: #0f0;
+    font-size: 2rem;
+    text-align: right;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    min-height: 48px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-content: center; /* 整體置中 */
+  }
+  
+  button {
+    font-size: 1.5rem;
+    padding: 12px 0;
+    width: 20px;  /* 固定寬度 */
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  
+  
+  button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  @media (max-width: 400px) {
+    .calculator {
+      width: 90%;
+    }
+  
+    button {
+      padding: 16px;
+      font-size: 1.2rem;
+    }
+  }
+  
